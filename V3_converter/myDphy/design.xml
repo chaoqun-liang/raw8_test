@@ -1,0 +1,687 @@
+<?xml version="1.0" ?>
+<ipxact:design xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:lattice="http://www.latticesemi.com/lattice" xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
+    <ipxact:vendor>latticesemi.com</ipxact:vendor>
+    <ipxact:library>ip</ipxact:library>
+    <ipxact:name>myDphy</ipxact:name>
+    <ipxact:version>1.4.3</ipxact:version>
+    <ipxact:componentInstances>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>lscc_dphy_rx_inst</ipxact:instanceName>
+            <ipxact:componentRef library="ip" name="dphy_rx" vendor="latticesemi.com" version="1.4.3">
+                <ipxact:configurableElementValues>
+                    <ipxact:configurableElementValue referenceId="FAMILY">LIFCL</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="DEVICE">LIFCL-40</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="PACKAGE">CABGA400</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="SPEED">8_High-Performance_1.0V</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_TYPE">CSI2</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="DPHY_RX_IP">MIXEL</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="DATA_R_WIDTH">32</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="NUM_RX_LANE">2</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_GEAR_INPUT">8</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_GEAR">8</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="CIL_BYPASS">True</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="LMMI">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="AXI4">True</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="DESKEW_INPUT">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="DESKEW_EN">DISABLED</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_LINE_RATE">800.0</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="DPHY_CLK_FREQ">400.0</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="HSEL">DISABLED</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="TEST_PATTERN">0b10000000001000000000000000000000</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_CLK_MODE">HS_ONLY</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="BYTECLK_MHZ">100</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="BYTECLK_MHZ_FLOAT">100.0</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="SYNCCLK_MHZ">60.0</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="DATA_SETTLE_CYC_EN">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="DATA_SETTLE_CYC">12</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="T_DATA_SETTLE_EN">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="T_DATA_SETTLE_INT">6</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="T_DATA_SETTLE">0b000110</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="T_CLK_SETTLE_EN">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="T_CLK_SETTLE_INT">9</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="T_CLK_SETTLE">0b001001</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="PARSER">True</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="MISC_ON">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="LANE_ALIGN">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="FIFO_DEPTH">4</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="FIFO_TYPE">EBR</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_FIFO">True</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_FIFO_IMPL">EBR</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_FIFO_DEPTH">128</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="NUM_QUE_ENT">4</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_FIFO_TYPE">SINGLE</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_FIFO_PKT_DLY">8</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_FIFO_CTR_WIDTH">4</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="FR_FIFO_CLKMODE">DC</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="FIFO_IF">CENTERED</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RX_FIFO_MISC">False</ipxact:configurableElementValue>
+                </ipxact:configurableElementValues>
+            </ipxact:componentRef>
+        </ipxact:componentInstance>
+    </ipxact:componentInstances>
+    <ipxact:adHocConnections>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lmmi_clk_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lmmi_clk_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lmmi_resetn_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lmmi_resetn_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lmmi_wdata_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lmmi_wdata_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lmmi_rdata_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lmmi_rdata_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lmmi_rdata_valid_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lmmi_rdata_valid_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lmmi_wr_rdn_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lmmi_wr_rdn_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lmmi_offset_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lmmi_offset_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lmmi_request_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lmmi_request_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lmmi_ready_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lmmi_ready_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.axis_mtvalid_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="axis_mtvalid_o"/>
+                <ipxact:externalPortReference portRef="axis_mtvalid_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.axis_mtdata_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="axis_mtdata_o"/>
+                <ipxact:externalPortReference portRef="axis_mtdata_o">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>47</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.axis_stready_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="axis_stready_i"/>
+                <ipxact:externalPortReference portRef="axis_stready_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.pll_lock_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="pll_lock_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.sync_clk_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="sync_clk_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.sync_rst_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="sync_rst_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.ready_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="ready_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.clk_byte_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="clk_byte_o"/>
+                <ipxact:externalPortReference portRef="clk_byte_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.clk_byte_hs_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="clk_byte_hs_o"/>
+                <ipxact:externalPortReference portRef="clk_byte_hs_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.clk_lp_ctrl_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="clk_lp_ctrl_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.clk_byte_fr_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="clk_byte_fr_i"/>
+                <ipxact:externalPortReference portRef="clk_byte_fr_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.reset_n_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="reset_n_i"/>
+                <ipxact:externalPortReference portRef="reset_n_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.reset_lp_n_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="reset_lp_n_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.reset_byte_n_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="reset_byte_n_i"/>
+                <ipxact:externalPortReference portRef="reset_byte_n_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.reset_byte_fr_n_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="reset_byte_fr_n_i"/>
+                <ipxact:externalPortReference portRef="reset_byte_fr_n_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.clk_p_io</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="clk_p_io"/>
+                <ipxact:externalPortReference portRef="clk_p_io"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.clk_n_io</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="clk_n_io"/>
+                <ipxact:externalPortReference portRef="clk_n_io"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.d_p_io</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="d_p_io"/>
+                <ipxact:externalPortReference portRef="d_p_io">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>1</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.d_n_io</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="d_n_io"/>
+                <ipxact:externalPortReference portRef="d_n_io">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>1</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp_d_rx_p_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp_d_rx_p_o"/>
+                <ipxact:externalPortReference portRef="lp_d_rx_p_o">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>1</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp_d_rx_n_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp_d_rx_n_o"/>
+                <ipxact:externalPortReference portRef="lp_d_rx_n_o">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>1</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.bd_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="bd_o"/>
+                <ipxact:externalPortReference portRef="bd_o">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>15</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.cd_clk_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="cd_clk_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.cd_d0_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="cd_d0_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.hs_d_en_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="hs_d_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.hs_sync_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="hs_sync_o"/>
+                <ipxact:externalPortReference portRef="hs_sync_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp_hs_state_clk_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp_hs_state_clk_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp_hs_state_d_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp_hs_state_d_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.term_clk_en_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="term_clk_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.term_d_en_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="term_d_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.payload_en_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="payload_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.payload_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="payload_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.dt_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="dt_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.vc_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="vc_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.wc_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="wc_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.ecc_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="ecc_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.dt2_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="dt2_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.vc2_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="vc2_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.wc2_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="wc2_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.ecc2_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="ecc2_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.bd0_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="bd0_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.bd1_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="bd1_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.bd2_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="bd2_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.bd3_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="bd3_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.capture_en_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="capture_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.ref_dt_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="ref_dt_i"/>
+                <ipxact:externalPortReference portRef="ref_dt_i">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>5</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.tx_rdy_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="tx_rdy_i"/>
+                <ipxact:externalPortReference portRef="tx_rdy_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp_d0_tx_en_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp_d0_tx_en_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp_d0_tx_p_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp_d0_tx_p_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp_d0_tx_n_i</ipxact:name>
+            <ipxact:tiedValue>1'b0</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp_d0_tx_n_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.pd_dphy_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="pd_dphy_i"/>
+                <ipxact:externalPortReference portRef="pd_dphy_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.sp_en_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="sp_en_o"/>
+                <ipxact:externalPortReference portRef="sp_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp_en_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp_en_o"/>
+                <ipxact:externalPortReference portRef="lp_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp_av_en_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp_av_en_o"/>
+                <ipxact:externalPortReference portRef="lp_av_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.sp2_en_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="sp2_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp2_en_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp2_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.lp2_av_en_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="lp2_av_en_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.hs_en0_settle_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="hs_en0_settle_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.rxdatsyncfr_state_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="rxdatsyncfr_state_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.rxemptyfr0_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="rxemptyfr0_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.rxemptyfr1_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="rxemptyfr1_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.rxfullfr0_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="rxfullfr0_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.rxfullfr1_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="rxfullfr1_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.rxque_curstate_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="rxque_curstate_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.rxque_empty_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="rxque_empty_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.rxque_full_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="rxque_full_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.skewcal_det_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="skewcal_det_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.skewcal_done_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="skewcal_done_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.err_ctrl_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="err_ctrl_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.err_esc_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="err_esc_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.err_soths_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="err_soths_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.err_syncesc_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="err_syncesc_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>myDphy.err_sotsynchs_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="myDphy" portRef="err_sotsynchs_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+    </ipxact:adHocConnections>
+</ipxact:design>

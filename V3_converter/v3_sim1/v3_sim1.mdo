@@ -1,0 +1,41 @@
+if {![file exists "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/v3_sim1/v3_sim1.mpf"]} { 
+	project new "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/v3_sim1" v3_sim1
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/D_unpack/my_fifo1/rtl/my_fifo1.v" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/payload_unpack.sv" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/sync_unpack.sv" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/D_unpack/int_gpll/rtl/int_gpll.v" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/axis4_slave_if.sv" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/DPHY_INST.v" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/wrapper_test_da.sv" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/bus_driver.v" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/clk_driver.v" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/csi2_model.v" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/tb_da.sv" verilog
+	project addfile "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/myDphy/rtl/myDphy.v" verilog
+	vlib  work
+	vdel -lib work -all 
+	vlib work
+
+	vlog  +incdir+"C:/Users/chaoq/my_designs/csi2cpi/D_unpack/my_fifo1/rtl" -work work  "C:/Users/chaoq/my_designs/csi2cpi/D_unpack/my_fifo1/rtl/my_fifo1.v"
+	vlog  +incdir+"C:/Users/chaoq/my_designs/csi2cpi/D_unpack/int_gpll/rtl" -work work  "C:/Users/chaoq/my_designs/csi2cpi/D_unpack/int_gpll/rtl/int_gpll.v"
+	vlog  +incdir+"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1" -work work  "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/DPHY_INST.v"
+	vlog  +incdir+"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1" -work work  "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/bus_driver.v"
+	vlog  +incdir+"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1" -work work  "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/clk_driver.v"
+	vlog  +incdir+"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1" -work work  "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/csi2_model.v"
+	vlog  +incdir+"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/myDphy/rtl" -work work  "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/myDphy/rtl/myDphy.v"
+	vlog -sv -mfcu \
+	+incdir+"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1" \
+ -work work \
+	"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/payload_unpack.sv" \
+	"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/sync_unpack.sv" \
+	"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/axis4_slave_if.sv" \
+	"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/wrapper_test_da.sv" \
+	"C:/Users/chaoq/my_designs/csi2cpi/V3_converter/source/impl_1/tb_da.sv"
+} else {
+	project open "C:/Users/chaoq/my_designs/csi2cpi/V3_converter/v3_sim1/v3_sim1"
+	project compileoutofdate
+}
+vsim -voptargs=+acc -lib work -L pmi_work -L ovi_lifcl  tb_da 
+view wave
+add wave /*
+run 100 ns

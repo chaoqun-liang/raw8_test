@@ -1,0 +1,69 @@
+set architecture "LIFCL"
+set device "LIFCL-40"
+set package "CABGA400"
+set speed "8_High-Performance_1.0V"
+set WRAPPER_INST "lscc_dphy_rx_inst"
+set FAMILY "LIFCL"
+set RX_TYPE "CSI2"
+set DPHY_RX_IP "MIXEL"
+set NUM_RX_LANE 2
+set RX_GEAR 8
+set CIL_BYPASS "CIL_BYPASSED"
+set LMMI "OFF"
+set AXI4 "ON"
+set DESKEW_EN "DISABLED"
+set HSEL "DISABLED"
+set TEST_PATTERN "0b10000000001000000000000000000000"
+set RX_CLK_MODE "HS_ONLY"
+set BYTECLK_MHZ 100
+set BYTECLK_MHZ_FLOAT 100.000000
+set SYNCCLK_MHZ 60.000000
+set DATA_SETTLE_CYC 12
+set T_DATA_SETTLE "0b000110"
+set T_CLK_SETTLE "0b001001"
+set PARSER "ON"
+set LANE_ALIGN "OFF"
+set FIFO_DEPTH 4
+set FIFO_TYPE "EBR"
+set RX_FIFO "ON"
+set RX_FIFO_IMPL "EBR"
+set RX_FIFO_DEPTH 128
+set NUM_QUE_ENT 4
+set RX_FIFO_TYPE "SINGLE"
+set RX_FIFO_PKT_DLY 8
+set RX_FIFO_CTR_WIDTH 4
+set FR_FIFO_CLKMODE "DC"
+set FIFO_IF "CENTERED"
+set RX_FIFO_MISC "OFF"
+
+
+set BYTE_CLK_PERIOD [expr {double(round(1000000/$BYTECLK_MHZ))/1000}]
+set DPHY_CLK_PERIOD [expr {$BYTE_CLK_PERIOD*2/$RX_GEAR}]
+
+if {($DPHY_RX_IP != "MIXEL") && ($CIL_BYPASS != "CIL_BYPASSED")} {
+  set SYNC_CLK_PERIOD [expr {double(round(1000000/$SYNCCLK_MHZ))/1000}]
+  create_clock -name {sync_clk_i} -period $SYNC_CLK_PERIOD [get_ports sync_clk_i]
+}
+
+if {$RX_CLK_MODE == "HS_LP"} {
+  create_clock -name {clk_lp_ctrl_i} -period 20 [get_ports clk_lp_ctrl_i]
+}
+ 
+if {$LMMI == "ON"} { 
+  create_clock -name {lmmi_clk_i} -period 10 [get_ports lmmi_clk_i] 
+}
+
+create_clock -name {clk_byte_fr_i} -period $BYTE_CLK_PERIOD [get_ports clk_byte_fr_i]
+create_clock -name {clk_p_io} -period $DPHY_CLK_PERIOD [get_ports clk_p_io]
+create_generated_clock -name {clk_byte_hs_o_c} -source [get_ports clk_p_io] -divide_by [expr {$RX_GEAR/2}] [get_nets -hierarchical clk_byte_hs_o*]
+
+if {($DPHY_RX_IP == "MIXEL")} {
+create_generated_clock -name {clk_byte_o_c} -source [get_ports clk_p_io] -divide_by [expr {$RX_GEAR/2}] [get_nets -hierarchical clk_byte_o*]
+} 
+##### asynchronous
+if {($DPHY_RX_IP != "MIXEL")} {
+set_false_path -through [get_nets -hierarchical {term_clk_en_o* term_d_en_o*}]
+}
+
+##### location constraint for the selection of the Hard D-PHY 
+### ldc_set_location -site {DPHY1} [get_cells lscc_dphy_rx_inst/*/*/*DPHY_inst]

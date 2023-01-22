@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<RadiantModule architecture="LIFCL" date="2023 01 22 23:50:51" device="LIFCL-40" generator="ipgen" library="ip" module="dphy_rx" name="myDphy" package="CABGA400" source_format="Verilog" speed="8_High-Performance_1.0V" vendor="latticesemi.com" version="1.4.3">
+ <Package>
+  <File modified="2023 01 22 23:50:51" name="rtl/myDphy_bb.v" type="black_box_verilog"/>
+  <File modified="2023 01 22 23:50:51" name="myDphy.cfg" type="cfg"/>
+  <File modified="2023 01 22 23:50:51" name="misc/myDphy_tmpl.v" type="template_verilog"/>
+  <File modified="2023 01 22 23:50:51" name="misc/myDphy_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2023 01 22 23:50:51" name="rtl/myDphy.v" type="top_level_verilog"/>
+  <File modified="2023 01 22 23:50:51" name="constraints/myDphy.ldc" type="timing_constraints"/>
+  <File modified="2023 01 22 23:50:51" name="testbench/dut_params.v" type="dependency_file"/>
+  <File modified="2023 01 22 23:50:51" name="testbench/dut_inst.v" type="dependency_file"/>
+  <File modified="2023 01 22 23:50:51" name="component.xml" type="IP-XACT_component"/>
+  <File modified="2023 01 22 23:50:51" name="design.xml" type="IP-XACT_design"/>
+  <File modified="2022 10 21 14:25:45" name="testbench/bus_driver.v" type="testbench_verilog"/>
+  <File modified="2022 10 21 14:25:45" name="testbench/clk_driver.v" type="testbench_verilog"/>
+  <File modified="2022 10 21 14:25:45" name="testbench/csi2_model.v" type="testbench_verilog"/>
+  <File modified="2022 10 21 14:25:45" name="testbench/dsi_model.v" type="testbench_verilog"/>
+  <File modified="2022 10 21 14:25:45" name="testbench/tb_top.v" type="testbench_verilog"/>
+ </Package>
+</RadiantModule>

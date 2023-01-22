@@ -1,0 +1,1 @@
+C:/lscc/radiant/3.2/bin/nt64/moduleparser.exe -PROJ v3_sim1 -pf C:/lscc/radiant/3.2/cae_library/synthesis/vhdl/lifcl.vhd -pf C:/lscc/radiant/3.2/cae_library/synthesis/verilog/lifcl.v -lib lifcl -lst C:/Users/chaoq/my_designs/csi2cpi/V3_converter/v3_sim1/source_files.lst
